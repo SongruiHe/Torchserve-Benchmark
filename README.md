@@ -24,3 +24,6 @@ Where ~ stands for you own home directory that contains all folders listed above
 * Start the benchmark client:
 
 `singularity run -B ~:/home torchserve_benchmark.sif`
+
+# Reference
+https://github.com/pytorch/serve/blob/master/benchmarks/README.md#benchmarking-with-apache-bench
