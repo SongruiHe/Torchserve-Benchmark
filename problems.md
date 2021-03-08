@@ -1,6 +1,6 @@
 ## On turing, Torchserve does use the GPU(if it doesn't, rps is ~30), but can't fully utilize the GPU.
 
-**1. Singularity environment problems —>Maybe**
+**1. Singularity environment problems —>Not likely**
 
 I compared the libs loaded by torchserve on Tui and turing, and found out these libs are not loaded on turing: `libnvidia-ngx.so`  `libnvidia-allocator.so`
 
@@ -10,7 +10,7 @@ I compared the libs loaded by torchserve on Tui and turing, and found out these 
  - if it doesn't exist, use `etc/singularity/nvbliblist.conf` to load. We can't modify this file without sudo.
 I tried to install singularity without sudo under my directory(so I can't modify the file), failed—>can't replace older version
 
-    I installed torchserve via conda(so it will load libs directly from system).  Still low throughput.
+I installed torchserve via conda(so it will load libs directly from system).  Still low throughput.
 
 **2. cuDNN version or CUDA version —> Not likely**
 
