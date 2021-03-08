@@ -6,9 +6,9 @@ I compared the libs loaded by torchserve on Tui and turing, and found out these 
 
  `--nv` flag automatically loads libs: 
 
- - if `nvidia-comtainer-cli` exists, use this to load libs.  We can't isntall this without sudo.
+ - if `nvidia-comtainer-cli` exists, use this to load libs.  We can't install this without sudo.
  - if it doesn't exist, use `etc/singularity/nvbliblist.conf` to load. We can't modify this file without sudo.
-I tried to install singularity without sudo under my directory(so I can't modify the file), failed—>can't replace older version
+I tried to install singularity without sudo under my directory(so I can modify the file), failed—>can't replace older version
 
 I installed torchserve via conda(so it will load libs directly from system).  Still low throughput.
 
